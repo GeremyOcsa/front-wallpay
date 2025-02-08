@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CDN Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="container">
+    <div>
+      <h1>WallPay</h1>
+    </div>
+
+    <form>
+      <fieldset>
+        <div>
+          <input type="radio" id="busApellido" checked name="busqueda">
+          <label for="busApellido">Búsqueda por apellidos</label>
+        </div>
+        <div>
+          <input type="radio" id="busDNI" name="busqueda">
+          <label for="busDNI">Búsqueda por DNI</label>
+        </div>
+      </fieldset>
+
+      <div class="input-container">
+        <input type="text" class="search-bar" id="apellidoPaterno" placeholder="Buscar por apellido paterno">
+        <input type="text" class="search-bar" id="apellidoMaterno" placeholder="Buscar por apellido materno">
+      </div>
+      <div>
+        <input type="text" class="search-bar inline" id="DNI" placeholder="Buscar por DNI">
+      </div>
+      <button type="submit" class="btn btn-primary px-3 align-self-start" id="search-button">Buscar</button>
+    </form>
+
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Número Registro</th>
+            <th>DNI</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Fecha Nacimiento</th>
+            <th>Telefono</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+
+  </section>
+  <script type="module" src="script/main.js"></script>
+</body>
+
+</html>
